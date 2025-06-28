@@ -11,6 +11,8 @@ import json
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
+server = app.server  # REQUIRED for gunicorn
+
 app.title = "Curve Fitting Dashboard"
 
 # Initial sample data
@@ -630,4 +632,4 @@ def update_chart_and_metrics(points_data, curve_type, poly_degree):
     return fig, fit_result['equation'], metrics_div
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run()
