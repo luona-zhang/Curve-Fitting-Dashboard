@@ -1,4 +1,6 @@
 dash
-pandas
 plotly
+pandas
+numpy
+scikit-learn
 gunicorn
